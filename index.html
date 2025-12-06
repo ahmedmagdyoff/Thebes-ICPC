@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thebes ICPC Community | Competitive Programming</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">
+        <div class="logo-icon" style="width: 40px; height: 40px; font-size: 1.2rem">
+          <img src="logo.png" alt="Thebes ICPC Logo" style="width: 100%; height: 100%; object-fit: contain" />
+        </div>
+        <div class="logo-text">
+          <h1>Thebes <span>ICPC</span><span> Community</span></h1>
+        </div>
+      </div>
+
+      <nav>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="#home" class="active">Home</a>
+          <a href="#level0">Level 0</a>
+          <a href="#level1">Level 1</a>
+          <a href="#top-performers">Top Performers</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Practice Sheets Modal -->
+  <div class="modal" id="sheetsModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fas fa-file-code"></i> Practice Sheets Repository</h3>
+        <button class="modal-close" id="modalClose">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-buttons">
+          <button class="sheet-btn level0-btn" id="level0SheetsBtn">
+            <div style="display: flex; align-items: center; gap: 0.8rem">
+              <i class="fas fa-layer-group"></i>
+              <span>Level 0 Sheets</span>
+            </div>
+            <i class="fas fa-external-link-alt arrow"></i>
+          </button>
+
+          <button class="sheet-btn level1-btn" id="level1SheetsBtn">
+            <div style="display: flex; align-items: center; gap: 0.8rem">
+              <i class="fas fa-rocket"></i>
+              <span>Level 1 Sheets</span>
+            </div>
+            <i class="fas fa-external-link-alt arrow"></i>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>Click on a level to open its practice sheets</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container main-layout">
+    <!-- Content Section -->
+    <main class="content-section">
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <h2>Master Competitive Programming</h2>
+        <p>
+          Join the Thebes ICPC community to enhance your problem-solving
+          skills, learn advanced algorithms, and prepare for ICPC contests
+          with structured materials and mentorship.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#level0" class="btn btn-primary">
+            <i class="fas fa-layer-group"></i>
+            Level 0: Foundations
+          </a>
+          <a href="#level1" class="btn btn-primary">
+            <i class="fas fa-rocket"></i>
+            Level 1: Advanced Topics
+          </a>
+          <a href="#top-performers" class="btn btn-secondary" id="viewTopPerformersBtn">
+            <i class="fas fa-trophy"></i>
+            View Top Performers
+          </a>
+        </div>
+      </section>
+
+      <!-- Level 0 Section -->
+      <section id="level0">
+        <div class="section-header" id="level0-header">
+          <div>
+            <h2>
+              <i class="fas fa-layer-group"></i> Level 0 - Foundation Topics
+            </h2>
+            <div class="level-indicator level0-indicator">
+              Beginner Friendly
+            </div>
+          </div>
+          <i class="fas fa-chevron-down collapse-icon"></i>
+        </div>
+
+        <div class="weeks-container" id="level0-content">
+          <div class="weeks-grid">
+            <!-- Week 0 -->
+            <div class="week-card level0-card">
+              <div class="week-header">
+                <h3 class="week-title">Week 0: Data Types & Conditions</h3>
+                <span class="week-tag level0-tag">Week 0</span>
+              </div>
+              <div class="week-materials">
+                <a href="https://youtu.be/-8HeEpiPGEw?si=959s65EWx_G8LqPd" target="_blank" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Explanation Sessions</span>
+                </a>
+                <a href="https://youtu.be/Gxhu9bMLsyA?si=kNI67cly3FJ-5bS4" target="_blank" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Upsolve Sessions</span>
+                </a>
+                <a href="https://codeforces.com/group/ad1tgTiYqR/contest/646399" target="_blank" class="material-link">
+                  <i class="fas fa-link"></i>
+                  <span>Practice Sheet</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Week 1 -->
+            <div class="week-card level0-card">
+              <div class="week-header">
+                <h3 class="week-title">Week 1: Loops</h3>
+                <span class="week-tag level0-tag">Week 1</span>
+              </div>
+              <div class="week-materials">
+                <a href="https://youtu.be/2hExttjc93U?si=E--BNRi086EkbfSI" target="_blank" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Explanation Sessions</span>
+                </a>
+                <a href="https://youtu.be/4Ou6hBPdpIE?si=GidKWDTeecL1xhX9" target="_blank" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Upsolve Sessions</span>
+                </a>
+                <a href="https://codeforces.com/group/ad1tgTiYqR/contest/647607" target="_blank" class="material-link">
+                  <i class="fas fa-link"></i>
+                  <span>Practice Sheet</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Week 2 -->
+            <div class="week-card level0-card">
+              <div class="week-header">
+                <h3 class="week-title">Week 2: Arrays</h3>
+                <span class="week-tag level0-tag">Week 2</span>
+              </div>
+              <div class="week-materials">
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Explanation Sessions</span>
+                </a>
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Upsolve Sessions</span>
+                </a>
+                <a href="https://codeforces.com/group/ad1tgTiYqR/contests" target="_blank" class="material-link">
+                  <i class="fas fa-link"></i>
+                  <span>Practice Sheet</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Week 3 -->
+            <div class="week-card level0-card">
+              <div class="week-header">
+                <h3 class="week-title">Week 3: Strings</h3>
+                <span class="week-tag level0-tag">Week 3</span>
+              </div>
+              <div class="week-materials">
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Explanation Sessions</span>
+                </a>
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Upsolve Sessions</span>
+                </a>
+                <a href="https://codeforces.com/group/ad1tgTiYqR/contests" target="_blank" class="material-link">
+                  <i class="fas fa-link"></i>
+                  <span>Practice Sheet</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Week 4 -->
+            <div class="week-card level0-card">
+              <div class="week-header">
+                <h3 class="week-title">Week 4: Math</h3>
+                <span class="week-tag level0-tag">Week 4</span>
+              </div>
+              <div class="week-materials">
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Explanation Sessions</span>
+                </a>
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Upsolve Sessions</span>
+                </a>
+                <a href="https://codeforces.com/group/ad1tgTiYqR/contests" target="_blank" class="material-link">
+                  <i class="fas fa-link"></i>
+                  <span>Practice Sheet</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Week 5 -->
+            <div class="week-card level0-card">
+              <div class="week-header">
+                <h3 class="week-title">
+                  Week 5: Time Complexity & Functions
+                </h3>
+                <span class="week-tag level0-tag">Week 5</span>
+              </div>
+              <div class="week-materials">
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Explanation Sessions</span>
+                </a>
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Upsolve Sessions</span>
+                </a>
+                <a href="https://codeforces.com/group/ad1tgTiYqR/contests" target="_blank" class="material-link">
+                  <i class="fas fa-link"></i>
+                  <span>Practice Sheet</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Week 6 -->
+            <div class="week-card level0-card">
+              <div class="week-header">
+                <h3 class="week-title">Week 6: STL Part 1</h3>
+                <span class="week-tag level0-tag">Week 6</span>
+              </div>
+              <div class="week-materials">
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Explanation Sessions</span>
+                </a>
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Upsolve Sessions</span>
+                </a>
+                <a href="https://codeforces.com/group/ad1tgTiYqR/contests" target="_blank" class="material-link">
+                  <i class="fas fa-link"></i>
+                  <span>Practice Sheet</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Week 7 -->
+            <div class="week-card level0-card">
+              <div class="week-header">
+                <h3 class="week-title">Week 7: STL Part 2</h3>
+                <span class="week-tag level0-tag">Week 7</span>
+              </div>
+              <div class="week-materials">
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Explanation Sessions</span>
+                </a>
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Upsolve Sessions</span>
+                </a>
+                <a href="https://codeforces.com/group/ad1tgTiYqR/contests" target="_blank" class="material-link">
+                  <i class="fas fa-link"></i>
+                  <span>Practice Sheet</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Weeks 8-10 -->
+            <div class="week-card level0-card">
+              <div class="week-header">
+                <h3 class="week-title">Weeks 8-10: General Practice</h3>
+                <span class="week-tag level0-tag">Weeks 8-10</span>
+              </div>
+              <div class="week-materials">
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Problem Solving Sessions</span>
+                </a>
+                <a href="https://codeforces.com/group/ad1tgTiYqR/contests" target="_blank" class="material-link">
+                  <i class="fas fa-link"></i>
+                  <span>Comprehensive Practice Sheets</span>
+                </a>
+                <a href="#" class="material-link">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Contest Simulations</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="#top-performers" class="btn btn-secondary top-performers-btn">
+            <i class="fas fa-trophy"></i>
+            View Level 0 Top Performers
+          </a>
+        </div>
+      </section>
+
+      <!-- Level 1 Section -->
+      <section id="level1">
+        <div class="section-header" id="level1-header">
+          <div>
+            <h2><i class="fas fa-rocket"></i> Level 1 - Advanced Topics</h2>
+            <div class="level-indicator level1-indicator">
+              Intermediate/Advanced
+            </div>
+          </div>
+          <i class="fas fa-chevron-down collapse-icon"></i>
+        </div>
+
+        <div class="weeks-container" id="level1-content">
+          <div class="weeks-grid">
+            <!-- Week 0 -->
+            <div class="week-card level1-card">
+              <div class="week-header">
+                <h3 class="week-title">Week 0: Static Range Queries</h3>
+                <span class="week-tag level1-tag">Week 0</span>
+              </div>
+              <div class="week-materials">
+                <a href="https://youtu.be/FBzALeRGEGY?si=Xm2nOR1bP7Yy7lbv" target="_blank" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Explanation Sessions</span>
+                </a>
+                <a href="https://youtu.be/Szmgsswga8A?si=S31RiIV67-wmD8pg" target="_blank" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Upsolve Sessions</span>
+                </a>
+                <a href="https://vjudge.net/contest/756150" target="_blank" class="material-link">
+                  <i class="fas fa-link"></i>
+                  <span>Practice Sheet</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Week 1 -->
+            <div class="week-card level1-card">
+              <div class="week-header">
+                <h3 class="week-title">Week 1: Two Pointers</h3>
+                <span class="week-tag level1-tag">Week 1</span>
+              </div>
+              <div class="week-materials">
+                <a href="https://youtu.be/Pg526lDmtD0?si=POHH66ZwH3AIKVar" target="_blank" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Explanation Sessions</span>
+                </a>
+                <a href="https://youtu.be/HNd8rL_UI6U?si=4rZVlaEwO2yEn9qw" target="_blank" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Upsolve Sessions</span>
+                </a>
+                <a href="https://vjudge.net/contest/758414" target="_blank" class="material-link">
+                  <i class="fas fa-link"></i>
+                  <span>Practice Sheet</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Week 2 -->
+            <div class="week-card level1-card">
+              <div class="week-header">
+                <h3 class="week-title">Week 2: Binary Search</h3>
+                <span class="week-tag level1-tag">Week 2</span>
+              </div>
+              <div class="week-materials">
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Explanation Sessions</span>
+                </a>
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Upsolve Sessions</span>
+                </a>
+                <a href="https://vjudge.net/group/icpc-thebes-Level-1-2026" target="_blank" class="material-link">
+                  <i class="fas fa-link"></i>
+                  <span>Practice Sheet</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Week 3 -->
+            <div class="week-card level1-card">
+              <div class="week-header">
+                <h3 class="week-title">Week 3: Bitmask</h3>
+                <span class="week-tag level1-tag">Week 3</span>
+              </div>
+              <div class="week-materials">
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Explanation Sessions</span>
+                </a>
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Upsolve Sessions</span>
+                </a>
+                <a href="https://vjudge.net/group/icpc-thebes-Level-1-2026" target="_blank" class="material-link">
+                  <i class="fas fa-link"></i>
+                  <span>Practice Sheet</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Week 4 -->
+            <div class="week-card level1-card">
+              <div class="week-header">
+                <h3 class="week-title">Week 4: Number Theory 1</h3>
+                <span class="week-tag level1-tag">Week 4</span>
+              </div>
+              <div class="week-materials">
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Explanation Sessions</span>
+                </a>
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Upsolve Sessions</span>
+                </a>
+                <a href="https://vjudge.net/group/icpc-thebes-Level-1-2026" target="_blank" class="material-link">
+                  <i class="fas fa-link"></i>
+                  <span>Practice Sheet</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Week 5 -->
+            <div class="week-card level1-card">
+              <div class="week-header">
+                <h3 class="week-title">Week 5: Number Theory 2</h3>
+                <span class="week-tag level1-tag">Week 5</span>
+              </div>
+              <div class="week-materials">
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Explanation Sessions</span>
+                </a>
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Upsolve Sessions</span>
+                </a>
+                <a href="https://vjudge.net/group/icpc-thebes-Level-1-2026" target="_blank" class="material-link">
+                  <i class="fas fa-link"></i>
+                  <span>Practice Sheet</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Week 6 -->
+            <div class="week-card level1-card">
+              <div class="week-header">
+                <h3 class="week-title">Week 6: Recursion & Backtracking</h3>
+                <span class="week-tag level1-tag">Week 6</span>
+              </div>
+              <div class="week-materials">
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Explanation Sessions</span>
+                </a>
+                <a href="#" class="material-link">
+                  <i class="fab fa-youtube"></i>
+                  <span>Upsolve Sessions</span>
+                </a>
+                <a href="https://vjudge.net/group/icpc-thebes-Level-1-2026" target="_blank" class="material-link">
+                  <i class="fas fa-link"></i>
+                  <span>Practice Sheet</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="#top-performers" class="btn btn-secondary top-performers-btn">
+            <i class="fas fa-trophy"></i>
+            View Level 1 Top Performers
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-card" id="top-performers">
+        <div class="sidebar-header">
+          <h3><i class="fas fa-trophy"></i> Top Performers</h3>
+          <div class="slide-controls">
+            <button class="slide-btn" id="prevSlide">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slide-btn" id="nextSlide">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="top-performers" id="topPerformersContainer">
+          <!-- Slide 1: Level 0 Top 10 -->
+          <div class="slide level0-slide active" id="slide1">
+            <h4 class="slide-title">Level 0 - Top 10 Performers</h4>
+            <div class="performer-list">
+              <!-- Rank 1 -->
+              <div class="performer">
+                <div class="rank rank-1">1</div>
+                <div class="performer-info">
+                  <h4>hosamahmed816</h4>
+                  <p>Solved: 83 problems</p>
+                </div>
+                <div class="score">100%</div>
+              </div>
+
+              <!-- Rank 2 -->
+              <div class="performer">
+                <div class="rank rank-2">2</div>
+                <div class="performer-info">
+                  <h4>mennahelal882</h4>
+                  <p>Solved: 82 problems</p>
+                </div>
+                <div class="score">98.79%</div>
+              </div>
+
+              <!-- Rank 3 -->
+              <div class="performer">
+                <div class="rank rank-3">3</div>
+                <div class="performer-info">
+                  <h4>3moSeifSalah</h4>
+                  <p>Solved: 82 problems</p>
+                </div>
+                <div class="score">98.79%</div>
+              </div>
+
+              <!-- Rank 4-10 -->
+              <div class="performer">
+                <div class="rank rank-4-10">4</div>
+                <div class="performer-info">
+                  <h4>abdallahnabil</h4>
+                  <p>Solved: 73 problems</p>
+                </div>
+                <div class="score">87.95%</div>
+              </div>
+
+              <div class="performer">
+                <div class="rank rank-4-10">5</div>
+                <div class="performer-info">
+                  <h4>nehadelsawi</h4>
+                  <p>Solved: 71 problems</p>
+                </div>
+                <div class="score">85.5%</div>
+              </div>
+
+              <div class="performer">
+                <div class="rank rank-4-10">6</div>
+                <div class="performer-info">
+                  <h4>MalkFares</h4>
+                  <p>Solved: 70 problems</p>
+                </div>
+                <div class="score">84.3%</div>
+              </div>
+
+              <div class="performer">
+                <div class="rank rank-4-10">7</div>
+                <div class="performer-info">
+                  <h4>AhmedHossam</h4>
+                  <p>Solved: 69 problems</p>
+                </div>
+                <div class="score">83.13%</div>
+              </div>
+
+              <div class="performer">
+                <div class="rank rank-4-10">8</div>
+                <div class="performer-info">
+                  <h4>ahmedmagdyoff</h4>
+                  <p>Solved: 63 problems</p>
+                </div>
+                <div class="score">75.5%</div>
+              </div>
+
+              <div class="performer">
+                <div class="rank rank-4-10">9</div>
+                <div class="performer-info">
+                  <h4>Bassant_Amr</h4>
+                  <p>Solved: 62 problems</p>
+                </div>
+                <div class="score">74.69%</div>
+              </div>
+
+              <div class="performer">
+                <div class="rank rank-4-10">10</div>
+                <div class="performer-info">
+                  <h4>Shahd_Shahat</h4>
+                  <p>Solved: 52 problems</p>
+                </div>
+                <div class="score">62.65%</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Level 1 Top 3 -->
+          <div class="slide level1-slide" id="slide2">
+            <h4 class="slide-title">Level 1 - Top 3 Performers</h4>
+            <div class="performer-list">
+              <!-- Rank 1 -->
+              <div class="performer">
+                <div class="rank rank-1">1</div>
+                <div class="performer-info">
+                  <h4>BenRamadan</h4>
+                  <p>Solved: 50 problems</p>
+                </div>
+                <div class="score">60.24%</div>
+              </div>
+
+              <!-- Rank 2 -->
+              <div class="performer">
+                <div class="rank rank-2">2</div>
+                <div class="performer-info">
+                  <h4>MOXO</h4>
+                  <p>Solved: 50 problems</p>
+                </div>
+                <div class="score">60.24%</div>
+              </div>
+
+              <!-- Rank 3 -->
+              <div class="performer">
+                <div class="rank rank-3">3</div>
+                <div class="performer-info">
+                  <h4>Mnltn</h4>
+                  <p>Solved: 32 problems</p>
+                </div>
+                <div class="score">38.5%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 1.5rem">
+          <button class="btn btn-secondary" id="pauseSlideBtn" style="padding: 0.5rem 1rem; font-size: 0.9rem">
+            <i class="fas fa-pause"></i> Pause Auto-Slide
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Links Card -->
+      <div class="sidebar-card">
+        <div class="sidebar-header">
+          <h3><i class="fas fa-external-link-alt"></i> Quick Links</h3>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.youtube.com/@icpc-thebes" target="_blank"><i class="fab fa-youtube"></i> YouTube
+            Channel</a>
+          <a href="#" id="practiceSheetsBtn"><i class="fas fa-file-code"></i> Practice Sheets Repository</a>
+          <a href="https://chat.whatsapp.com/K07D1q4dUjuHZh5fmkBCyW" target="_blank"><i class="fas fa-users"></i>
+            Community WhatsApp</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Thebes ICPC</h3>
+          <p>
+            Our mission is to build a strong competitive programming community
+            at Thebes Academy, preparing students for ICPC and other
+            programming competitions.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Learning Paths</h3>
+          <div class="footer-links">
+            <a href="#level0"><i class="fas fa-layer-group"></i> Level 0 - Foundation</a>
+            <a href="#level1"><i class="fas fa-rocket"></i> Level 1 - Advanced</a>
+            <a href="#"><i class="fas fa-chart-line"></i> Progress Tracking</a>
+            <a href="#" id="practiceSheetsBtnFooter"><i class="fas fa-trophy"></i> Practice Sheets</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="footer-links">
+            <a href="https://www.facebook.com/thebescpc" target="_blank"><i class="fab fa-facebook"></i> Facebook
+              Page</a>
+            <a href="https://chat.whatsapp.com/K07D1q4dUjuHZh5fmkBCyW" target="_blank"><i class="fab fa-whatsapp"></i>
+              Community WhatsApp</a>
+            <a href="https://www.linkedin.com/company/icpc-thebes/" target="_blank"><i class="fab fa-linkedin"></i>
+              LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>
+          &copy; 2025 Thebes ICPC Community. All rights reserved. | Designed
+          for competitive programmers
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
