@@ -149,11 +149,9 @@ header {
 .hero {
   text-align: center;
   padding: 3rem 0;
-  background: linear-gradient(
-    135deg,
-    rgba(108, 99, 255, 0.1),
-    rgba(54, 209, 220, 0.1)
-  );
+  background: linear-gradient(135deg,
+      rgba(108, 99, 255, 0.1),
+      rgba(54, 209, 220, 0.1));
   border-radius: 20px;
   margin-bottom: 3rem;
   position: relative;
@@ -508,6 +506,8 @@ header {
   font-weight: 700;
   margin-right: 1rem;
   flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
 }
 
 .rank-1 {
@@ -523,11 +523,6 @@ header {
 .rank-3 {
   background: linear-gradient(135deg, #cd7f32, #a6692a);
   color: #000;
-}
-
-.rank-4-10 {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text-primary);
 }
 
 .performer-info h4 {
@@ -795,6 +790,7 @@ footer {
     font-size: 1rem;
   }
 }
+
 @media (max-width: 767px) {
   .logo-text h1 {
     font-size: 1.25rem;
