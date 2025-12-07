@@ -283,20 +283,22 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// fetch("Level 0 - Top 10 Performers.csv").then(res => res.text()).then(text => {
-//   const list = document.querySelector(".performer-list");
-//   text.trim().split("\n").slice(1).forEach((line, i) => {
-//     const [Handle, , Standings, , Percentage] = line.split(",");
-//     list.innerHTML += `
-//       <!-- Rank ${i + 1} -->
-//       <div class="performer">
-//         <div class="rank rank-${i + 1}">${i + 1}</div>
-//         <div class="performer-info">
-//           <h4>${Handle}</h4>
-//           <p>Solved: ${Standings} Problems</p>
-//         </div>
-//         <div class="score">${Percentage}</div>
-//       </div>
-//     `;
-//   });
-// });
+// Performers
+function performers(file, selector) {
+  fetch(file).then(res => res.text()).then(text => {
+    text.trim().split("\n").slice(1).forEach((line, i) => {
+      const [Handle, , Standings, , Percentage] = line.split(",");
+      document.querySelector(selector).innerHTML += `
+        <!-- Rank ${i + 1} -->
+        <div class="performer">
+          <div class="rank rank-${i + 1}">${i + 1}</div>
+          <div class="performer-info">
+            <h4>${Handle}</h4>
+            <p>Solved: ${Standings} Problems</p>
+          </div>
+          <div class="score">${Percentage}</div>
+        </div>
+      `;
+    });
+  });
+}

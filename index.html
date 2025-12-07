@@ -526,22 +526,7 @@
             <h4 class="slide-title">Level 0 - Top 10 Performers</h4>
             <div class="performer-list">
               <script>
-                fetch("Level 0 - Top 10 Performers.csv").then(res => res.text()).then(text => {
-                  text.trim().split("\n").slice(1).forEach((line, i) => {
-                    const [Handle, , Standings, , Percentage] = line.split(",");
-                    document.querySelector(".level0-slide .performer-list").innerHTML += `
-                      <!-- Rank ${i + 1} -->
-                      <div class="performer">
-                        <div class="rank rank-${i + 1}">${i + 1}</div>
-                        <div class="performer-info">
-                          <h4>${Handle}</h4>
-                          <p>Solved: ${Standings} Problems</p>
-                        </div>
-                        <div class="score">${Percentage}</div>
-                      </div>
-                    `;
-                  });
-                });
+                document.addEventListener("DOMContentLoaded", function () { performers("Level 0 - Top 10 Performers.csv", "#slide1 .performer-list"); });
               </script>
             </div>
           </div>
@@ -551,22 +536,7 @@
             <h4 class="slide-title">Level 1 - Top 3 Performers</h4>
             <div class="performer-list">
               <script>
-                fetch("Level 1 - Top 3 Performers.csv").then(res => res.text()).then(text => {
-                  text.trim().split("\n").slice(1).forEach((line, i) => {
-                    const [Handle, , Standings, , Percentage] = line.split(",");
-                    document.querySelector(".level1-slide .performer-list").innerHTML += `
-                      <!-- Rank ${i + 1} -->
-                      <div class="performer">
-                        <div class="rank rank-${i + 1}">${i + 1}</div>
-                        <div class="performer-info">
-                          <h4>${Handle}</h4>
-                          <p>Solved: ${Standings} Problems</p>
-                        </div>
-                        <div class="score">${Percentage}</div>
-                      </div>
-                    `;
-                  });
-                });
+                document.addEventListener("DOMContentLoaded", function () { performers("Level 1 - Top 3 Performers.csv", "#slide2 .performer-list"); });
               </script>
             </div>
           </div>
