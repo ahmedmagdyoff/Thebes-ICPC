@@ -283,33 +283,20 @@ window.addEventListener("scroll", () => {
   });
 });
 
-const csv = `
-Handle,All,Standings,UnStandings,Percentage
-ahmedmagdyoff,85,63,24,100.00%
-hosamahmed816,84,84,0,98.82%
-3moSeifSalah,84,82,2,98.82%
-mennahelal882,84,82,2,98.82%
-MalkFares,76,72,4,89.41%
-Mazen.Yehia,74,53,21,87.06%
-basma108,73,72,1,85.88%
-abdallahnabil209,73,73,0,85.88%
-nehadelsawi,72,72,0,84.71%
-Ahmed_Hossam_69,70,69,1,82.35%
-`.trim().split("\n").slice(1);
-
-const list = document.querySelector("#slide1 .performer-list");
-
-csv.forEach((line, i) => {
-  const [Handle, All, Standings, UnStandings, Percentage] = line.split(",");
-  list.innerHTML += `
-    <!-- Rank ${i + 1} -->
-    <div class="performer">
-      <div class="rank rank-${i + 1}">${i + 1}</div>
-      <div class="performer-info">
-        <h4>${Handle}</h4>
-        <p>Solved: ${Standings} Problems</p>
-      </div>
-      <div class="score">${Percentage}</div>
-    </div>
-  `;
-});
+// fetch("Level 0 - Top 10 Performers.csv").then(res => res.text()).then(text => {
+//   const list = document.querySelector(".performer-list");
+//   text.trim().split("\n").slice(1).forEach((line, i) => {
+//     const [Handle, , Standings, , Percentage] = line.split(",");
+//     list.innerHTML += `
+//       <!-- Rank ${i + 1} -->
+//       <div class="performer">
+//         <div class="rank rank-${i + 1}">${i + 1}</div>
+//         <div class="performer-info">
+//           <h4>${Handle}</h4>
+//           <p>Solved: ${Standings} Problems</p>
+//         </div>
+//         <div class="score">${Percentage}</div>
+//       </div>
+//     `;
+//   });
+// });

@@ -525,6 +525,24 @@
           <div class="slide level0-slide active" id="slide1">
             <h4 class="slide-title">Level 0 - Top 10 Performers</h4>
             <div class="performer-list">
+              <script>
+                fetch("Level 0 - Top 10 Performers.csv").then(res => res.text()).then(text => {
+                  text.trim().split("\n").slice(1).forEach((line, i) => {
+                    const [Handle, , Standings, , Percentage] = line.split(",");
+                    document.querySelector(".performer-list").innerHTML += `
+                      <!-- Rank ${i + 1} -->
+                      <div class="performer">
+                        <div class="rank rank-${i + 1}">${i + 1}</div>
+                        <div class="performer-info">
+                          <h4>${Handle}</h4>
+                          <p>Solved: ${Standings} Problems</p>
+                        </div>
+                        <div class="score">${Percentage}</div>
+                      </div>
+                    `;
+                  });
+                });
+              </script>
             </div>
           </div>
 
@@ -532,35 +550,24 @@
           <div class="slide level1-slide" id="slide2">
             <h4 class="slide-title">Level 1 - Top 3 Performers</h4>
             <div class="performer-list">
-              <!-- Rank 1 -->
-              <div class="performer">
-                <div class="rank rank-1">1</div>
-                <div class="performer-info">
-                  <h4>BenRamadan</h4>
-                  <p>Solved: 50 problems</p>
-                </div>
-                <div class="score">60.24%</div>
-              </div>
-
-              <!-- Rank 2 -->
-              <div class="performer">
-                <div class="rank rank-2">2</div>
-                <div class="performer-info">
-                  <h4>MOXO</h4>
-                  <p>Solved: 50 problems</p>
-                </div>
-                <div class="score">60.24%</div>
-              </div>
-
-              <!-- Rank 3 -->
-              <div class="performer">
-                <div class="rank rank-3">3</div>
-                <div class="performer-info">
-                  <h4>Mnltn</h4>
-                  <p>Solved: 32 problems</p>
-                </div>
-                <div class="score">38.5%</div>
-              </div>
+              <script>
+                fetch("Level 1 - Top 3 Performers.csv").then(res => res.text()).then(text => {
+                  text.trim().split("\n").slice(1).forEach((line, i) => {
+                    const [Handle, , Standings, , Percentage] = line.split(",");
+                    document.querySelector(".performer-list").innerHTML += `
+                      <!-- Rank ${i + 1} -->
+                      <div class="performer">
+                        <div class="rank rank-${i + 1}">${i + 1}</div>
+                        <div class="performer-info">
+                          <h4>${Handle}</h4>
+                          <p>Solved: ${Standings} Problems</p>
+                        </div>
+                        <div class="score">${Percentage}</div>
+                      </div>
+                    `;
+                  });
+                });
+              </script>
             </div>
           </div>
         </div>
