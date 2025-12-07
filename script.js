@@ -283,11 +283,11 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Top Performers
-function topPerformers(level) {
-  fetch(`data/top-performers/${level}.csv`).then(res => res.text()).then(text => {
+// Performers
+function performers(level) {
+  fetch(`data/performers/${level}.csv`).then(res => res.text()).then(text => {
     text.trim().split("\n").slice(1).forEach((line, i) => {
-      const [handle, all, standings, , percentage] = line.split(",");
+      const [handle, , standings, , percentage] = line.split(",");
       document.querySelector(`.level${level}-slide .performer-list`).innerHTML += `
         <!-- Rank ${i + 1} -->
         <div class="performer">
