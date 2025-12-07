@@ -1,4 +1,8 @@
-Handle,All,Standings,UnStandings,Percentage
-BenRamadan,50,50,24,60.24%
-MOXO,50,50,0,60.24%
-Mnltn,32,32,0,38.5%
+Title,Tag,Explanation,Upsolve,Practice
+Static Range Queries,Week 0,#,#,#
+Two Pointers,Week 1,#,#,#
+Binary Search,Week 2,#,#,#
+Bitmask,Week 3,#,#,#
+Number Theory 1,Week 4,#,#,#
+Number Theory 2,Week 5,#,#,#
+Recursion & Backtracking,Week 6,#,#,#
