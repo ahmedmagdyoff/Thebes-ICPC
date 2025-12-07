@@ -283,6 +283,37 @@ window.addEventListener("scroll", () => {
   });
 });
 
+// Topics
+function topics(level) {
+  fetch(`data/topics/${level}.csv`).then(res => res.text()).then(text => {
+    text.trim().split("\n").slice(1).forEach((line, i) => {
+      const [title, tag, explanation, upsolve, practice] = line.split(",");
+      document.querySelector(`#level${level}-content .weeks-grid`).innerHTML += `
+        <!-- ${tag} -->
+        <div class="week-card level${level}-card">
+          <div class="week-header">
+            <h3 class="week-title">${title}</h3>
+            <span class="week-tag level${level}-tag">${tag}</span>
+          </div>
+          <div class="week-materials">
+            <a href="${explanation}" target="_blank" class="material-link">
+              <i class="fab fa-youtube"></i>
+              <span>Explanation Sessions</span>
+            </a>
+            <a href="${upsolve}" target="_blank" class="material-link">
+              <i class="fab fa-youtube"></i>
+              <span>Upsolve Sessions</span>
+            </a>
+            <a href="${practice}" target="_blank" class="material-link">
+              <i class="fas fa-link"></i>
+              <span>Practice Sheet</span>
+            </a>
+          </div>
+      `;
+    });
+  });
+}
+
 // Performers
 function performers(level) {
   fetch(`data/performers/${level}.csv`).then(res => res.text()).then(text => {
