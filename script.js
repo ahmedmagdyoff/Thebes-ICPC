@@ -283,20 +283,20 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Performers
-function performers(file, selector) {
-  fetch(file).then(res => res.text()).then(text => {
+// Top Performers
+function topPerformers(level) {
+  fetch(`data/top-performers/${level}.csv`).then(res => res.text()).then(text => {
     text.trim().split("\n").slice(1).forEach((line, i) => {
-      const [Handle, , Standings, , Percentage] = line.split(",");
-      document.querySelector(selector).innerHTML += `
+      const [handle, all, standings, , percentage] = line.split(",");
+      document.querySelector(`.level${level}-slide .performer-list`).innerHTML += `
         <!-- Rank ${i + 1} -->
         <div class="performer">
           <div class="rank rank-${i + 1}">${i + 1}</div>
           <div class="performer-info">
-            <h4>${Handle}</h4>
-            <p>Solved: ${Standings} Problems</p>
+            <h4>${handle}</h4>
+            <p>Solved: ${standings} Problems</p>
           </div>
-          <div class="score">${Percentage}</div>
+          <div class="score">${percentage}</div>
         </div>
       `;
     });
