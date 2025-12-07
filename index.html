@@ -529,7 +529,7 @@
                 fetch("Level 0 - Top 10 Performers.csv").then(res => res.text()).then(text => {
                   text.trim().split("\n").slice(1).forEach((line, i) => {
                     const [Handle, , Standings, , Percentage] = line.split(",");
-                    document.querySelector(".performer-list").innerHTML += `
+                    document.querySelector(".level0-slide .performer-list").innerHTML += `
                       <!-- Rank ${i + 1} -->
                       <div class="performer">
                         <div class="rank rank-${i + 1}">${i + 1}</div>
@@ -554,7 +554,7 @@
                 fetch("Level 1 - Top 3 Performers.csv").then(res => res.text()).then(text => {
                   text.trim().split("\n").slice(1).forEach((line, i) => {
                     const [Handle, , Standings, , Percentage] = line.split(",");
-                    document.querySelector(".performer-list").innerHTML += `
+                    document.querySelector(".level1-slide .performer-list").innerHTML += `
                       <!-- Rank ${i + 1} -->
                       <div class="performer">
                         <div class="rank rank-${i + 1}">${i + 1}</div>
