@@ -12,15 +12,15 @@ async function topics(level) {
                     <span class="week-tag level${level}-tag">${tag}</span>
                 </div>
                 <div class="week-materials">
-                    <a href="${explanation}" target="_blank" class="material-link">
+                    <a ${explanation && `href="${explanation}"`} target="_blank" class="material-link">
                         <i class="fab fa-youtube"></i>
                         <span>Explanation Sessions</span>
                     </a>
-                    <a href="${upsolve}" target="_blank" class="material-link">
+                    <a ${upsolve && `href="${upsolve}"`} target="_blank" class="material-link">
                         <i class="fab fa-youtube"></i>
                         <span>Upsolve Sessions</span>
                     </a>
-                    <a href="${practice}" target="_blank" class="material-link">
+                    <a ${practice && `href="${practice}"`} target="_blank" class="material-link">
                         <i class="fas fa-link"></i>
                         <span>Practice Sheet</span>
                     </a>
