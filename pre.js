@@ -36,14 +36,14 @@ function performers(level) {
     const list = document.querySelector(`.level${level}-slide .performer-list`);
     fetch(`data/performers/${level}.csv`).then(res => res.text()).then(text => {
         text.trim().split("\n").slice(1).forEach((line, i) => {
-            const [handle, , standings, , percentage] = line.split(",");
+            const [handle, all, , , percentage] = line.split(",");
             list.innerHTML += `
                 <!-- Rank ${i + 1} -->
                 <div class="performer">
                     <div class="rank rank-${i + 1}">${i + 1}</div>
                     <div class="performer-info">
                         <h4>${handle}</h4>
-                        <p>Solved: ${standings} Problems</p>
+                        <p>Solved: ${all} Problems</p>
                     </div>
                     <div class="score">${percentage}</div>
                 </div>
